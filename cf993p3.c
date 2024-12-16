@@ -46,3 +46,5 @@ int main()
     free(totalSeated);
     return 0;
 }
+
+// CodeForces Contest 993 P3
