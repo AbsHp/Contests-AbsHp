@@ -42,3 +42,5 @@ int main()
     }
     return 0;
 }
+
+// CodeForces Contest 971 P3
