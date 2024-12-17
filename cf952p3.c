@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+
 int countGoodPrefixes(int a[], int n)
 {
     int count = 0;
@@ -19,7 +19,7 @@ int countGoodPrefixes(int a[], int n)
     }
     return count;
 }
- 
+
 int main()
 {
     int t;
