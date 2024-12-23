@@ -4,41 +4,32 @@ int main()
 {
     int t;
     scanf("%d", &t);
-    int a1[t], b1[t], a2[t], b2[t];
-    for (int i = 0; i < t; i++)
+    int s1[t], s1[t], l1[t], l2[t];
+    int ways = 0;
+    for (s1 = 1; s1 <= 10; s1++)
     {
-        scanf("%d %d %d %d", &a1[i], &a2[i], &b1[i], &b2[i]);
+        for (s2 = 1; s2 <= 10; s2++)
+        {
+            for (l1 = 1; l1 <= 10; l1++)
+            {
+                for (l2 = 1; l2 <= 10; l2++)
+                {
+                    int suneet_wins = 0, slavic_wins = 0;
+                    if (s1 > l1)
+                        suneet_wins++;
+                    else if (s1 < l1)
+                        slavic_wins++;
+                    if (s2 > l2)
+                        suneet_wins++;
+                    else if (s2 < l2)
+                        slavic_wins++;
+                    if (suneet_wins > slavic_wins)
+                        ways++;
+                }
+            }
+        }
     }
-    for (int i = 0; i < t; i++)
-    {
-        int count = 0;
-        if (a1[i] > b1[i] && a2[i] > b2[i])
-        {
-            count = count + 2;
-        }
-        if (a1[i] > b2[i] && a2[i] > b1[i])
-        {
-            count = count + 2;
-        }
-        if (a1[i] == b1[i] && a2[i] > b2[i])
-        {
-            count = count + 2;
-        }
-        if (a1[i] > b1[i] && a2[i] == b2[i])
-        {
-            count = count + 2;
-        }
-        if (a1[i] == b2[i] && a2[i] > b1[i])
-        {
-            count = count + 2;
-        }
-        if (a1[i] > b2[i] && a2[i] == b1[i])
-        {
-            count = count + 2;
-        }
-        printf("%d\n", count);
-    }
+    printf("%d\n", ways);
+
     return 0;
 }
-
-// CodeForces Contest 964 P2
