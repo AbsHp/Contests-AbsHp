@@ -19,3 +19,5 @@ int main()
     printf("%d", fee);
     return 0;
 }
+
+// AtCoder Beginner Contest 44 P1
