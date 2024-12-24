@@ -56,3 +56,5 @@ int main()
     printf("%d %d %d", X + 1, Y + 1, distinctHouses);
     return 0;
 }
+
+// AtCoder Beginner Contest 385 P2
