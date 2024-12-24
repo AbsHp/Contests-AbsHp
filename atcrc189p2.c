@@ -26,4 +26,4 @@ int main()
     return 0;
 }
 
-// AtCoder Regular Contest 189 P2S
+// AtCoder Regular Contest 189 P2
