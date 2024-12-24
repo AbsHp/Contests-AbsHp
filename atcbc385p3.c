@@ -44,3 +44,5 @@ int main()
     printf("%d\n", result);
     return 0;
 }
+
+// AtCoder Beginner Contest 385 P2
