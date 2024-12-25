@@ -1,25 +1,54 @@
+// #include <stdio.h>
+
+// int main()
+// {
+//     long long a, b;
+//     scanf("%lld %lld", &a, &b);
+//     long long prod = 1;
+//     for (long long i = a; i <= b; i++)
+//     {
+//         prod *= i;
+//     }
+//     if (prod > 0)
+//     {
+//         printf("Positive");
+//     }
+//     else if (prod < 0)
+//     {
+//         printf("Negative");
+//     }
+//     else
+//     {
+//         printf("Zero");
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
 
 int main()
 {
-    int a, b;
-    scanf("%d %d", &a, &b);
-    int prod = 1;
-    for (int i = a; i <= b; i++)
+    long long a, b;
+    scanf("%lld %lld", &a, &b);
+    if (a <= 0 && b >= 0)
     {
-        prod *= i;
+        printf("Zero");
     }
-    if (prod > 0)
+    else if (a > 0)
     {
         printf("Positive");
     }
-    else if (prod < 0)
-    {
-        printf("Negative");
-    }
     else
     {
-        printf("Zero");
+        long long count = b - a + 1;
+        if (count % 2 == 0)
+        {
+            printf("Positive");
+        }
+        else
+        {
+            printf("Negative");
+        }
     }
     return 0;
 }
