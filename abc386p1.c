@@ -1,10 +1,40 @@
 #include <stdio.h>
 
+int canFormFullHouse(int cards[])
+{
+    int frequency[14] = {0};
+    for (int i = 0; i < 4; i++)
+    {
+        frequency[cards[i]]++;
+    }
+    for (int i = 1; i <= 13; i++)
+    {
+        frequency[i]++;
+        int countThree = 0, countTwo = 0;
+        for (int j = 1; j <= 13; j++)
+        {
+            if (frequency[j] == 3)
+                countThree++;
+            if (frequency[j] == 2)
+                countTwo++;
+        }
+        if (countThree == 1 && countTwo == 1)
+        {
+            return 1;
+        }
+        frequency[i]--;
+    }
+    return 0;
+}
+
 int main()
 {
-    int A, B, C, D;
-    scanf("%d %d %d %d", &A, &B, &C, &D);
-    if (((A == B) && (C == D) && (A != C)) || ((A == C) && (B == D) && (A != B)) || ((A == D) && (C == B) && (A != B)) || ((A == B) && (B == C) && (C != D)) || ((B == C) && (C == D) && (D != A)) || ((C == D) && (D == A) && (A != B)))
+    int cards[4];
+    for (int i = 0; i < 4; i++)
+    {
+        scanf("%d", &cards[i]);
+    }
+    if (canFormFullHouse(cards))
     {
         printf("Yes");
     }
